@@ -50,6 +50,12 @@ body {
     overflow-y: hidden;
 }
 
+.main-container {
+    width: 80%;
+    margin-inline: auto;
+    padding-inline: 10px;
+}
+
 /* MENU */
 
 .desktop-menu {
@@ -164,5 +170,91 @@ body {
 
     .desktop-menu nav ul li p {
         display: inline-block;
+    }
+}
+
+/* RANKING TABLE */
+
+.responsive-table .table-row {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.table-header {
+    padding-inline: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+.table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.col-1 {
+    flex-basis: 10%;
+    padding-inline: 10px 20px;
+    min-width: 90px;
+}
+
+.col-2 {
+    flex-basis: 30%;
+    padding-left: 20px;
+}
+
+.col-3 {
+    flex-basis: 25%;
+}
+
+.col-4 {
+    flex-basis: 15%;
+}
+
+.col-5 {
+    flex-basis: 15%;
+}
+
+.col-6 {
+    flex-basis: 10%;
+}
+
+@media all and (max-width: 767px) {
+    .responsive-table .table-header {
+        display: none;
+
+
+    }
+
+    .responsive-table .table-row {
+        display: block;
+
+    }
+
+    .col {
+
+        flex-basis: 100%;
+
+    }
+
+    .col {
+        display: flex;
+        padding: 10px 0;
+
+    }
+
+    .col:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+
+
     }
 }

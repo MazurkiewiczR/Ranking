@@ -62,11 +62,11 @@
     </header>
 
     <main>
-      <div class="container">
+      <div class="main-container">
         <section id="introduction">
           <div class="box intro-box">
-            <h1>Czym jest ranking terminali?</h1>
-            <p>
+            <h1 class="section-title">Czym jest ranking terminali?</h1>
+            <p class="section-details">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
               autem aperiam, eveniet voluptas id error nulla beatae. Deserunt
               aliquid labore eaque, delectus doloremque recusandae consequuntur
@@ -80,14 +80,89 @@
 
         <section id="fun-facts">
           <div class="box fun-fact-box">
-            <h2>Czy wiesz, że?</h2>
-            <p>
+            <h2 class="section-title">Czy wiesz, że?</h2>
+            <p class="section-details">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Perferendis ut harum eius quo quidem quia delectus aperiam
               voluptatum architecto. Dolorem temporibus sint minus magni enim
               suscipit voluptatibus nisi maxime quos?
             </p>
           </div>
+        </section>
+
+        <section id="top-rating">
+          <h2 class="section-title">Najlepsze w tym miesiącu</h2>
+
+          <div class="grid-layout">
+            <div class="grid-item">
+              <div class="main-data">
+                <p class="position">1.</p>
+                <p class="company-name">Nazwa 1</p>
+                <p class="rating">x<span>*</span></p>
+              </div>
+              <div class="additional-data-container">
+                <div class="additional-data">Dane 1</div>
+                <div class="additional-data">Dane 2</div>
+                <div class="additional-data">Dane 3</div>
+              </div>
+            </div>
+
+            <div class="grid-item">
+              <div class="main-data">
+                <p class="position">2.</p>
+                <p class="company-name">Nazwa 2</p>
+                <p class="rating">y<span>*</span></p>
+              </div>
+              <div class="additional-data-container">
+                <div class="additional-data">Dane 1</div>
+                <div class="additional-data">Dane 2</div>
+                <div class="additional-data">Dane 3</div>
+              </div>
+            </div>
+
+            <div class="grid-item">
+              <div class="main-data">
+                <p class="position">3.</p>
+                <p class="company-name">Nazwa 3</p>
+                <p class="rating">z<span>*</span></p>
+              </div>
+              <div class="additional-data-container">
+                <div class="additional-data">Dane 1</div>
+                <div class="additional-data">Dane 2</div>
+                <div class="additional-data">Dane 3</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="ranking">
+
+          <ul class="responsive-table">
+            <li class="table-header">
+              <div class="col col-1">Pozycja</div>
+              <div class="col col-2">Nazwa</div>
+              <div class="col col-3">Ocena</div>
+              <div class="col col-4">Dane1</div>
+              <div class="col col-5">Dane2</div>
+              <div class="col col-6">Dane3</div>
+            </li>
+            <li class="table-row">
+              <div class="col col-1" data-label="Pozycja">1</div>
+              <div class="col col-2" data-label="Nazwa">John Doe</div>
+              <div class="col col-3" data-label="Ocena">$350</div>
+              <div class="col col-4" data-label="Dane1">Pending</div>
+              <div class="col col-5" data-label="Dane2">Pending</div>
+              <div class="col col-6" data-label="Dane3">Pending</div>
+            </li>
+            <li class="table-row">
+              <div class="col col-1" data-label="Pozycja">2</div>
+              <div class="col col-2" data-label="Nazwa">John Doe</div>
+              <div class="col col-3" data-label="Ocena">$350</div>
+              <div class="col col-4" data-label="Dane1">Pending</div>
+              <div class="col col-5" data-label="Dane2">Pending</div>
+              <div class="col col-6" data-label="Dane3">Pending</div>
+            </li>
+
         </section>
       </div>
     </main>
