@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
     margin: 0;
@@ -17,28 +17,24 @@ ul {
 
 /* BLOCKS */
 
-html {
-    height: 1000px;
-}
-
 body {
-    height: 1000px;
     background-color: var(--main-bg);
+    font-family: "Lato", sans-serif;
 }
 
 /* VARIABLES */
 
 :root {
     --main-light-bg: #f8f8f8;
-    --primary-light-bg: #FFFFFF;
-    --light-gradient-bg: linear-gradient(to right, #118DFF, #60B3FF);
+    --primary-light-bg: #ffffff;
+    --light-gradient-bg: linear-gradient(to right, #118dff, #60b3ff);
     --primary-light-text: #161616;
     --secondary-light-text: #303030;
     --light-table-header: #313131;
 
-    --main-dark-bg: #0C1020;
-    --primary-dark-bg: #0B1824;
-    --dark-gradient-bg: linear-gradient(to right, #102C46, #12426D);
+    --main-dark-bg: #0c1020;
+    --primary-dark-bg: #0b1824;
+    --dark-gradient-bg: linear-gradient(to right, #102c46, #12426d);
     --primary-dark-text: #f3f3f3;
     --secondary-dark-text: #f8f8f8;
     --dark-table-header: #b3b3b3;
@@ -51,9 +47,23 @@ body {
 }
 
 .main-container {
-    width: 80%;
+    width: 90%;
     margin-inline: auto;
     padding-inline: 10px;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.box {
+    font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+    .main-container {
+        width: 80%;
+    }
 }
 
 /* MENU */
@@ -66,7 +76,8 @@ body {
     background-color: transparent;
     width: 100%;
     height: 55px;
-    background-color: #118DFF;
+    background-color: var(--light-gradient-bg);
+    background-image: var(--light-gradient-bg);
 }
 
 .hamburger {
@@ -83,7 +94,7 @@ body {
 .hamburger .bar {
     width: 25px;
     height: 2px;
-    background-color: red;
+    background-color: #ffffff;
     margin: 3px 0;
     transition: 0.5s;
 }
@@ -105,8 +116,11 @@ body {
 }
 
 .menu {
-    background-color: #118DFF;
+    background-color: var(--light-gradient-bg);
+    background-image: var(--light-gradient-bg);
     z-index: 1;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 .mobile-menu {
@@ -140,7 +154,6 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-
     .mobile-menu {
         display: none;
     }
@@ -227,34 +240,26 @@ body {
 @media all and (max-width: 767px) {
     .responsive-table .table-header {
         display: none;
-
-
     }
 
     .responsive-table .table-row {
         display: block;
-
     }
 
     .col {
-
         flex-basis: 100%;
-
     }
 
     .col {
         display: flex;
         padding: 10px 0;
-
     }
 
     .col:before {
-        color: #6C7A89;
+        color: #6c7a89;
         padding-right: 10px;
         content: attr(data-label);
         flex-basis: 50%;
         text-align: right;
-
-
     }
 }
