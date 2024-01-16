@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terminal Ranking</title>
     <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"
+    />
   </head>
   <body>
     <header>
       <div class="desktop-menu menu">
         <div class="logo">
-          <img src="#" alt="Logo" width="40px" height="40px" />
+          <img src="#" alt="Logo" width="40" height="40" />
         </div>
         <nav>
           <ul>
@@ -32,7 +36,7 @@
 
       <div class="hamburger-wrapper">
         <div class="logo">
-          <img src="#" alt="Logo" width="40px" height="40px" />
+          <img src="#" alt="Logo" width="40" height="40" />
         </div>
         <div class="hamburger">
           <div class="bar"></div>
@@ -49,7 +53,7 @@
             <li><p>Ranking</p></li>
           </ul>
         </nav>
-<!--         <div class="theme-switch">
+        <!--         <div class="theme-switch">
           <span>Zmień motyw</span>
           <input
             type="checkbox"
@@ -79,14 +83,39 @@
         </section>
 
         <section id="fun_facts">
-          <div class="box fun-fact-box">
-            <h2 class="section-title">Czy wiesz, że?</h2>
-            <p class="section-details">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Perferendis ut harum eius quo quidem quia delectus aperiam
-              voluptatum architecto. Dolorem temporibus sint minus magni enim
-              suscipit voluptatibus nisi maxime quos?
-            </p>
+          <div class="container">
+            <div id="my-keen-slider" class="keen-slider">
+              <div class="keen-slider__slide number-slide3 box">
+                Lorem, ipsum.
+              </div>
+              <div class="keen-slider__slide number-slide4 box">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Corporis rerum enim nam ut saepe in!
+              </div>
+              <div class="keen-slider__slide number-slide5 box">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
+                asperiores ipsa esse sed soluta dolorum labore quibusdam in
+                beatae neque, consequuntur a earum, maiores unde.
+              </div>
+              <div class="keen-slider__slide number-slide6 box">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                nemo reprehenderit culpa illum sapiente praesentium deserunt.
+                Doloremque soluta quidem quod harum, asperiores iste provident
+                numquam corrupti ipsam, labore adipisci est?
+              </div>
+              <div class="keen-slider__slide number-slide6 box">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                esse sunt quod et aliquid ab iure dolorum voluptate ad,
+                cupiditate, quibusdam repellat error reiciendis. Quasi doloribus
+                blanditiis magni nostrum placeat quia! Illo eveniet saepe,
+                numquam dolorem possimus provident, temporibus quas corporis
+                amet in facere, rem assumenda cum tenetur vitae nihil?
+              </div>
+              <div class="keen-slider__slide number-slide6 box">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Incidunt, aut?
+              </div>
+            </div>
           </div>
         </section>
 
@@ -136,7 +165,6 @@
         </section>
 
         <section id="ranking">
-
           <ul class="responsive-table">
             <li class="table-header">
               <div class="col col-1">Pozycja</div>
@@ -154,8 +182,8 @@
               <div class="col col-5" data-label="Dane2">Pending</div>
               <div class="col col-6" data-label="Dane3">Pending</div>
             </li>
-            
-            <p class="show-more" id="show_more">Pokaż więcej...</p>
+          </ul>
+          <p class="show-more" id="show_more">Pokaż więcej...</p>
         </section>
       </div>
     </main>
@@ -181,7 +209,7 @@
         </div>
       </div>
     </footer>
-    <script src="node_modules/keen-slider/keen-slider.js"></script>
+    <script src="./node_modules/keen-slider/keen-slider.js"></script>
     <script src="./scripts/script.js"></script>
   </body>
 </html>
