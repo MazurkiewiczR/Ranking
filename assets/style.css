@@ -71,6 +71,7 @@ body {
     margin-block: 40px;
     text-align: justify;
     padding: 20px;
+    transition: 300ms;
 }
 
 .section-title {
@@ -259,6 +260,7 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
+    transition: 600ms;
 }
 
 .card .main-data {
@@ -267,7 +269,7 @@ body {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     font-size: var(--font-big);
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .card .company-name {
@@ -320,6 +322,8 @@ body {
 
 .show-more {
     color: #118dff;
+    cursor: pointer;
+    width: fit-content;
 }
 
 
@@ -349,6 +353,13 @@ body {
 .table-row {
     background-color: var(--primary-light-bg);
     box-shadow: var(--shadow);
+    transition: 300ms;
+}
+
+.box:hover,
+.card:hover,
+.table-row:hover {
+    box-shadow: none;
 }
 
 .col-1 {
@@ -412,15 +423,12 @@ body {
     padding: 60px 10%;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
 
     background-color: var(--light-gradient-bg);
     background-image: var(--light-gradient-bg);
     color: #ffffff;
-    font-size: var(--font-medium);
-}
-
-.footer > * {
-    padding: 15px 30px;
+    font-size: var(--font-small);
 }
 
 .ft-links {
@@ -441,15 +449,37 @@ body {
 
     .ft-links {
         order: 0;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: space-evenly;
-        align-content: start;
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
         gap: 20px;
     }
 
     .ft-links * {
         white-space: nowrap;
+    }
+
+    .ft-contact {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        text-align: start;
+    }
+
+    .ft-contact h3 {
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .ft-links {
+        grid-template: none / repeat(4, 1fr);
+    }
+
+    .phone-number {
+        display: inline-block;
+    }
+
+    .phone-number:last-of-type {
+        padding-left: 15px;
     }
 }
