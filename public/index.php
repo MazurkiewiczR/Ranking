@@ -163,44 +163,32 @@ require_once __DIR__ . "/../src/Service/XLSXService.php";
         <h2 class="section-title">Najlepsze w tym miesiącu</h2>
 
         <div class="flex-layout">
-          <div class="flex-item card">
-            <div class="main-data">
-              <p class="position">1.</p>
-              <p class="company-name">Nazwa 1</p>
-              <p class="rating">x<span>*</span></p>
-            </div>
-            <div class="additional-data-container">
-              <div class="additional-data">Dane 1</div>
-              <div class="additional-data">Dane 2</div>
-              <div class="additional-data">Dane 3</div>
-            </div>
-          </div>
-
-          <div class="flex-item card">
-            <div class="main-data">
-              <p class="position">2.</p>
-              <p class="company-name">Nazwa 2</p>
-              <p class="rating">y<span>⭐</span></p>
-            </div>
-            <div class="additional-data-container">
-              <div class="additional-data">Dane 1</div>
-              <div class="additional-data">Dane 2</div>
-              <div class="additional-data">Dane 3</div>
-            </div>
-          </div>
-
-          <div class="flex-item card">
-            <div class="main-data">
-              <p class="position">3.</p>
-              <p class="company-name">Nazwa 3</p>
-              <p class="rating">z<span>*</span></p>
-            </div>
-            <div class="additional-data-container">
-              <div class="additional-data">Dane 1</div>
-              <div class="additional-data">Dane 2</div>
-              <div class="additional-data">Dane 3</div>
-            </div>
-          </div>
+          <?php
+          $rows = XLSXService::readDataFromFile();
+          $displayLimit = 3;
+          $rowCounter = 0; 
+          foreach ($rows as $key => $row) :
+            if ($rowCounter < $displayLimit) : 
+          ?>
+              <div class="flex-item card">
+                <div class="main-data">
+                  <p class="position"><?= $key + 1 ?></p>
+                  <p class="company-name"><?= $row['A'] ?></p>
+                  <p class="rating"><?= $row['B'] ?><span>⭐</span></p>
+                </div>
+                <div class="additional-data-container">
+                  <div class="additional-data"><?= $row['C'] ?></div>
+                  <div class="additional-data"><?= $row['D'] ?></div>
+                  <div class="additional-data"><?= $row['E'] ?></div>
+                </div>
+              </div>
+          <?php
+              $rowCounter++;
+            else :
+              break; 
+            endif;
+          endforeach;
+          ?>
         </div>
       </section>
 
