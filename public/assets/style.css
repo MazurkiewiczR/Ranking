@@ -369,7 +369,9 @@ body {
     box-shadow: var(--shadow);
     transition: 300ms;
 }
-
+.responsive-table .hidden-row{
+    display: none;
+}
 .box:hover,
 .card:hover,
 .table-row:hover {

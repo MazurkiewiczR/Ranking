@@ -1,3 +1,10 @@
+document.getElementById('show_more').addEventListener('click', function () {
+  var hiddenRows = document.querySelectorAll('.hidden-row');
+  hiddenRows.forEach(function (row) {
+    row.classList.remove('hidden-row');
+  });
+  this.style.display = 'none';
+});
 document.addEventListener("DOMContentLoaded", function () {
   const hamburgerMenu = document.querySelector(".hamburger");
   const mobileMenu = document.querySelector(".mobile-menu");
