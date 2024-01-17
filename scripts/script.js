@@ -15,6 +15,11 @@ var slider = new KeenSlider(
   {
     mode: "snap",
     loop: "true",
+    breakpoints: {
+      "(max-width: 768px)": {
+        slides: { perView: 1, spacing: 10 },
+      },
+    },
 
     slides: () => [
       {
@@ -49,6 +54,7 @@ var slider = new KeenSlider(
       },
     ],
   },
+
   [
     (slider) => {
       let timeout;
