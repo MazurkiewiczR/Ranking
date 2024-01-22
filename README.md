@@ -1,5 +1,5 @@
 # Ranking
 
-ranking project
+Config:
 
-This is it
+Install:

@@ -22,13 +22,13 @@ require_once __DIR__ . "/../src/Service/XLSXService.php";
       <nav>
         <ul>
           <li>
-            <p>Ciekawostki</p>
+            <p id="fun_fact_link_desktop">Ciekawostki</p>
           </li>
           <li>
-            <p>Podium</p>
+            <p id="top_link_desktop">Podium</p>
           </li>
           <li>
-            <p>Ranking</p>
+            <p id="ranks_link_desktop">Ranking</p>
           </li>
         </ul>
       </nav>
@@ -58,13 +58,13 @@ require_once __DIR__ . "/../src/Service/XLSXService.php";
       <nav>
         <ul>
           <li>
-            <p>Ciekawostki</p>
+            <p id="fun_fact_link_mobile">Ciekawostki</p>
           </li>
           <li>
-            <p>Podium</p>
+            <p id="top_link_mobile">Podium</p>
           </li>
           <li>
-            <p>Ranking</p>
+            <p id="ranks_link_mobile">Ranking</p>
           </li>
         </ul>
       </nav>
@@ -100,6 +100,24 @@ require_once __DIR__ . "/../src/Service/XLSXService.php";
       <section id="fun_facts">
         <div class="container">
           <div id="my-keen-slider" class="keen-slider">
+            <div class="keen-slider__slide number-slide1 box">
+              <h2 class="section-title">Czy wiesz, że?</h2>
+              <p class="section-details">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+                quae corrupti rem quod quasi rerum distinctio iste repudiandae
+                accusantium ipsa sed a cum ut sapiente beatae, praesentium
+                commodi sunt illum.
+              </p>
+            </div>
+            <div class="keen-slider__slide number-slide2 box">
+              <h2 class="section-title">Czy wiesz, że?</h2>
+              <p class="section-details">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+                quae corrupti rem quod quasi rerum distinctio iste repudiandae
+                accusantium ipsa sed a cum ut sapiente beatae, praesentium
+                commodi sunt illum.
+              </p>
+            </div>
             <div class="keen-slider__slide number-slide3 box">
               <h2 class="section-title">Czy wiesz, że?</h2>
               <p class="section-details">
@@ -119,24 +137,6 @@ require_once __DIR__ . "/../src/Service/XLSXService.php";
               </p>
             </div>
             <div class="keen-slider__slide number-slide5 box">
-              <h2 class="section-title">Czy wiesz, że?</h2>
-              <p class="section-details">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
-                quae corrupti rem quod quasi rerum distinctio iste repudiandae
-                accusantium ipsa sed a cum ut sapiente beatae, praesentium
-                commodi sunt illum.
-              </p>
-            </div>
-            <div class="keen-slider__slide number-slide6 box">
-              <h2 class="section-title">Czy wiesz, że?</h2>
-              <p class="section-details">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
-                quae corrupti rem quod quasi rerum distinctio iste repudiandae
-                accusantium ipsa sed a cum ut sapiente beatae, praesentium
-                commodi sunt illum.
-              </p>
-            </div>
-            <div class="keen-slider__slide number-slide6 box">
               <h2 class="section-title">Czy wiesz, że?</h2>
               <p class="section-details">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
@@ -166,15 +166,15 @@ require_once __DIR__ . "/../src/Service/XLSXService.php";
           <?php
           $rows = XLSXService::readDataFromFile();
           $displayLimit = 3;
-          $rowCounter = 0; 
+          $rowCounter = 0;
           foreach ($rows as $key => $row) :
-            if ($rowCounter < $displayLimit) : 
+            if ($rowCounter < $displayLimit) :
           ?>
               <div class="flex-item card">
                 <div class="main-data">
                   <p class="position"><?= $key + 1 ?></p>
                   <p class="company-name"><?= $row['A'] ?></p>
-                  <p class="rating"><?= $row['B'] ?><span>⭐</span></p>
+                  <p class="rating"><?= $row['B'] ?></p>
                 </div>
                 <div class="additional-data-container">
                   <div class="additional-data"><?= $row['C'] ?></div>
@@ -185,7 +185,7 @@ require_once __DIR__ . "/../src/Service/XLSXService.php";
           <?php
               $rowCounter++;
             else :
-              break; 
+              break;
             endif;
           endforeach;
           ?>
@@ -200,12 +200,13 @@ require_once __DIR__ . "/../src/Service/XLSXService.php";
             $headers = XLSXService::readHeadersFromFile();
             foreach ($headers as $header) :
             ?>
+
               <div class="col col-2"><?= $header ?></div>
             <?php endforeach; ?>
           </li>
           <?php
           $rows = XLSXService::readDataFromFile();
-          $displayLimit = 10;
+          $displayLimit = 6;
           $rowCounter = 0;
 
           foreach ($rows as $key => $row) :
@@ -213,10 +214,10 @@ require_once __DIR__ . "/../src/Service/XLSXService.php";
             <li class="table-row <?php echo $rowCounter >= $displayLimit ? 'hidden-row' : ''; ?>">
               <div class="col col-1" data-label="Pozycja"><?= $key + 1 ?></div>
               <div class="col col-2" data-label="Nazwa"><?= $row['A'] ?></div>
-              <div class="col col-3" data-label="Ocena"><?= $row['B'] ?><span>⭐</span></div>
-              <div class="col col-4" data-label="Dane1"><?= $row['C'] ?></div>
-              <div class="col col-5" data-label="Dane2"><?= $row['D'] ?></div>
-              <div class="col col-6" data-label="Dane3"><?= $row['E'] ?></div>
+              <div class="col col-2" data-label="Ocena"><?= $row['B'] ?></div>
+              <div class="col col-2" data-label="Dane1"><?= $row['C'] ?></div>
+              <div class="col col-2" data-label="Dane2"><?= $row['D'] ?></div>
+              <div class="col col-2" data-label="Dane3"><?= $row['E'] ?></div>
             </li>
           <?php
             $rowCounter++;
@@ -240,12 +241,14 @@ require_once __DIR__ . "/../src/Service/XLSXService.php";
       <div>
         <h3>Kontakt:</h3>
         <div>
-          <p class="phone-number">tel.: 123 123 123</p>
-          <p class="phone-number">12 123 12 234</p>
+          <p>tel.: 123 123 123 <br><br> 12 123 12 234</p>
         </div>
       </div>
       <div>
         <p>ul. Krzywa 13/3</p>
+        <p>23-123 Miasto</p>
+      </div>
+      <div>
         <p>NIP: 123 123 12 23</p>
       </div>
     </div>
